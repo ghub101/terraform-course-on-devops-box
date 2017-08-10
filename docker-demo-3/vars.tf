@@ -13,7 +13,7 @@ variable "ECS_INSTANCE_TYPE" {
 variable "ECS_AMIS" {
   type = "map"
   default = {
-    eu-west-1 = "ami-d7b9a2b1"
+    eu-west-1 = "ami-1e749f67"
   }
 }
 # Full List: http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html
@@ -21,7 +21,7 @@ variable "ECS_AMIS" {
 variable "AMIS" {
   type = "map"
   default = {
-    eu-west-1 = "ami-d7b9a2b1"
+    eu-west-1 = "ami-1e749f67"
   }
 }
 variable "INSTANCE_DEVICE_NAME" {
