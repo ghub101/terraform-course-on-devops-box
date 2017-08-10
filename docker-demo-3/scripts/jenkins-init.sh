@@ -18,7 +18,7 @@ mount /var/lib/jenkins
 wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
 echo "deb http://pkg.jenkins.io/debian-stable binary/" >> /etc/apt/sources.list
 apt-get update
-apt-get install -y jenkins unzip docker.io
+apt-get install -y jenkins=${JENKINS_VERSION} unzip docker.io
 
 # enable docker and add perms
 usermod -G docker jenkins
