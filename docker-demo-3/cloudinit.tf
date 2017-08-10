@@ -1,4 +1,4 @@
-provider "cloudinit" {}
+
 
 data "template_file" "jenkins-init" {
   template = "${file("scripts/jenkins-init.sh")}"

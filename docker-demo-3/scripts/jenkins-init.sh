@@ -18,7 +18,7 @@ mount /var/lib/jenkins
 wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
 echo "deb http://pkg.jenkins.io/debian-stable binary/" >> /etc/apt/sources.list
 apt-get update
-apt-get install -y jenkins=${JENKINS_VERSION} unzip docker.io
+apt-get install -y jenkins unzip docker.io
 
 # enable docker and add perms
 usermod -G docker jenkins
@@ -36,8 +36,8 @@ pip install awscli
 
 # install terraform
 cd /usr/local/bin
-wget -q https://releases.hashicorp.com/terraform/0.7.7/terraform_0.7.7_linux_amd64.zip
-unzip terraform_0.7.7_linux_amd64.zip
+wget -q https://releases.hashicorp.com/terraform/0.10.0/terraform_0.10.0_linux_amd64.zip
+unzip terraform_0.10.0_linux_amd64.zip
 # clean up
 apt-get clean
-rm terraform_0.7.7_linux_amd64.zip
+rm terraform_0.10.0_linux_amd64.zip
